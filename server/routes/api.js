@@ -36,10 +36,10 @@ router.post('/new', function (req, res) {
         group: expense.group,
         date: getDate(expense.date)
     })
-    // let promise = e1.save()            // Used already once
-    // promise.then(function (e1) {
-    //   console.log(`you just spent ${e1.amount}$ for ${e1.name}`)
-    // })
+    let promise = e1.save()            // Used already once
+    promise.then(function (e1) {
+      console.log(`you just spent ${e1.amount}$ for ${e1.name}`)
+    })
     res.end()
 })
 
